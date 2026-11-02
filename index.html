@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MINIMAL | راهنمای هوشمند سایز لباس</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@200;300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--mut:rgba(255,255,255,.58);--line:rgba(255,255,255,.15)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:#000;color:#f5f5f7;font-family:'Vazirmatn',Tahoma,sans-serif;overflow-x:hidden}
+.orb{position:fixed;border-radius:50%;filter:blur(100px);z-index:0;pointer-events:none;animation:fl 14s ease-in-out infinite alternate}
+.o1{width:380px;height:380px;background:#41418a;top:-100px;right:-100px;opacity:.5}
+.o2{width:330px;height:330px;background:#1b6670;bottom:-80px;left:-80px;opacity:.45;animation-delay:-5s}
+.o3{width:240px;height:240px;background:#7a3a74;top:40%;left:40%;opacity:.25;animation-delay:-9s}
+@keyframes fl{to{transform:translate(40px,-50px) scale(1.15)}}
+.wrap{position:relative;z-index:1;max-width:1040px;margin:0 auto;padding:30px 16px 110px}
+.logo{text-align:center;font-weight:200;font-size:clamp(34px,9vw,60px);letter-spacing:.35em;margin:10px 0 0;padding-right:.35em;direction:ltr;background:linear-gradient(180deg,#fff,rgba(255,255,255,.45));-webkit-background-clip:text;background-clip:text;color:transparent}
+.tag{text-align:center;color:var(--mut);font-size:14px;margin:6px 0 28px}
+.g{background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.035));border:1px solid var(--line);border-radius:28px;backdrop-filter:blur(26px) saturate(170%);-webkit-backdrop-filter:blur(26px) saturate(170%);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),inset 0 -1px 0 rgba(255,255,255,.05),0 24px 60px rgba(0,0,0,.65);padding:22px;margin-bottom:20px;position:relative;overflow:hidden}
+.g::after{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--mx,50%) var(--my,0%),rgba(255,255,255,.13),transparent 70%);pointer-events:none}
+h2{font-size:17px;font-weight:600;margin:0 0 14px}
+.main{display:grid;grid-template-columns:1.25fr .75fr;gap:20px;align-items:start}
+.side{position:sticky;top:16px}
+.seg{display:flex;background:rgba(0,0,0,.4);border:1px solid var(--line);border-radius:18px;padding:4px;gap:4px;margin-bottom:12px}
+.seg button{flex:1;border:0;background:none;color:var(--mut);font:600 14px 'Vazirmatn',Tahoma,sans-serif;padding:10px;border-radius:14px;cursor:pointer;transition:.25s}
+.seg button.on{background:#fff;color:#000;box-shadow:0 4px 18px rgba(255,255,255,.25)}
+.lb{font-size:12px;color:var(--mut);margin:6px 2px}
+.m{padding:12px 4px;border-top:1px solid rgba(255,255,255,.08);opacity:.55;transition:.25s}
+.m.act{opacity:1}
+.mh{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.mh b{font-weight:600;font-size:15px}
+.mh small{display:block;color:var(--mut);font-size:11.5px;font-weight:300}
+.st{display:flex;align-items:center;gap:6px;direction:ltr}
+.st button{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.08);color:#fff;font-size:18px;cursor:pointer}
+.st button:active{background:#fff;color:#000}
+.st input{width:64px;background:none;border:0;outline:0;color:#fff;font:600 20px 'Vazirmatn',Tahoma,sans-serif;text-align:center}
+.st span{font-size:12px;color:var(--mut)}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:6px;background:rgba(255,255,255,.14);outline:0;direction:ltr}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:#fff;box-shadow:0 0 0 6px rgba(255,255,255,.15),0 4px 14px rgba(0,0,0,.6)}
+input[type=range]::-moz-range-thumb{width:26px;height:26px;border:0;border-radius:50%;background:#fff}
+.act input[type=range]{background:linear-gradient(90deg,#fff,#9ad)}
+.big{font-size:104px;font-weight:800;line-height:1.05;text-align:center;text-shadow:0 0 50px rgba(255,255,255,.45)}
+.big.pop{animation:pop .45s}
+@keyframes pop{40%{transform:scale(1.14)}}
+.c{text-align:center}
+.eu{color:var(--mut);font-size:14px;text-align:center}
+.chips{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin-top:14px}
+.chip{background:rgba(255,255,255,.08);border:1px solid var(--line);border-radius:13px;padding:6px 11px;font-size:12.5px}
+.chip b{margin-right:6px}
+.note{margin-top:12px;font-size:12.5px;color:#ffd9a0;line-height:1.9;text-align:center}
+.act2{display:flex;gap:8px;margin-top:16px}
+.act2 button{flex:1;padding:12px;border-radius:15px;border:1px solid var(--line);background:rgba(255,255,255,.08);color:#fff;font:600 13.5px 'Vazirmatn',Tahoma,sans-serif;cursor:pointer}
+.act2 .p{background:#fff;color:#000}
+.guide{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.gc{background:rgba(0,0,0,.35);border:1px solid var(--line);border-radius:20px;padding:16px;font-size:13.5px;line-height:2;color:rgba(255,255,255,.8)}
+.gc h3{margin:0 0 4px;font-size:15px;color:#fff;font-weight:600}
+.gc em{font-style:normal;display:inline-block;background:#fff;color:#000;border-radius:8px;padding:0 8px;font-size:12px;font-weight:600;margin-left:8px}
+.tw{overflow-x:auto}
+table{width:100%;min-width:640px;border-collapse:separate;border-spacing:0 6px;text-align:center;font-size:14px}
+th{color:var(--mut);font-weight:400;font-size:12px;padding:6px}
+td{padding:11px 6px;background:rgba(255,255,255,.05);border-block:1px solid rgba(255,255,255,.07)}
+td:first-child{border-radius:0 14px 14px 0;border-right:1px solid rgba(255,255,255,.07);font-weight:800;font-size:16px}
+td:last-child{border-radius:14px 0 0 14px;border-left:1px solid rgba(255,255,255,.07)}
+tr.on td{background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.55);box-shadow:0 0 26px rgba(255,255,255,.14)}
+p.t{color:rgba(255,255,255,.75);font-size:14px;line-height:2.1;margin:0}
+details{border-top:1px solid rgba(255,255,255,.1);padding:12px 2px}
+summary{cursor:pointer;font-weight:600;font-size:14.5px}
+details p{color:rgba(255,255,255,.72);font-size:13.5px;line-height:2;margin:8px 0 0}
+footer{text-align:center;color:var(--mut);font-size:12px;letter-spacing:.3em;direction:ltr;margin-top:30px}
+#bar{display:none;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:5;border-radius:22px;padding:10px 18px;align-items:center;justify-content:space-between;background:rgba(20,20,24,.6);border:1px solid var(--line);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 12px 40px rgba(0,0,0,.7)}
+#bar b{font-size:30px;font-weight:800}
+#bar span{color:var(--mut);font-size:13px}
+@media(max-width:780px){.main{grid-template-columns:1fr}.side{position:static;order:-1}.side .big{font-size:76px}#bar{display:flex}}
+</style>
+</head>
+<body>
+<div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+<div class="wrap">
+  <h1 class="logo">MINIMAL</h1>
+  <div class="tag">سایز مناسبت را در چند ثانیه پیدا کن، بدون حدس و بدون اشتباه</div>
+
+  <div class="main">
+    <div class="g">
+      <h2>۱. اندازه‌هایت را تنظیم کن</h2>
+      <div class="lb">جنسیت لباس</div>
+      <div class="seg" id="sg"><button data-v="m" class="on">آقایان</button><button data-v="f">بانوان</button></div>
+      <div class="lb">حالت دلخواه لباس</div>
+      <div class="seg" id="sf"><button data-v="-0.4">جذب</button><button data-v="0" class="on">استاندارد</button><button data-v="0.6">راحت و گشاد</button></div>
+      <div id="ms"></div>
+    </div>
+
+    <div class="side">
+      <div class="g" id="rc">
+        <h2 class="c">۲. سایز پیشنهادی شما</h2>
+        <div class="big" id="sz">؟</div>
+        <div class="eu" id="eu">یکی از اسلایدرها را حرکت بده</div>
+        <div class="chips" id="ch"></div>
+        <div class="note" id="nt"></div>
+        <div class="act2"><button class="p" id="ex">پر کردن نمونه</button><button id="cp">کپی نتیجه</button><button id="rs">پاک کردن</button></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="g">
+    <h2>راهنمای کامل اندازه‌گیری</h2>
+    <div class="guide">
+      <div class="gc"><h3><em>۱</em>دور سینه</h3>صاف و راحت بایست. متر را از پهن‌ترین قسمت سینه، یعنی از زیر بغل و روی نوک سینه، دور بدن بگذار. متر باید موازی زمین باشد و نه شل باشد نه فشرده. این مهم‌ترین اندازه برای انتخاب سایز تی‌شرت، پیراهن، کت و هودی است.</div>
+      <div class="gc"><h3><em>۲</em>دور کمر</h3>باریک‌ترین قسمت تنه، تقریباً بالای ناف، را اندازه بگیر. شکمت را داخل نکش و نفست را عادی بده. این عدد برای شلوار، شلوارک و لباس‌های کمردار تعیین‌کننده است.</div>
+      <div class="gc"><h3><em>۳</em>دور باسن</h3>متر را دور پهن‌ترین قسمت باسن بگذار و پاها را کنار هم نگه‌دار. برای شلوار جین و پارچه‌ای مخصوصاً در سایزهای جذب این اندازه اهمیت زیادی دارد.</div>
+      <div class="gc"><h3><em>۴</em>عرض شانه</h3>فاصله بین دو سر شانه، یعنی از استخوان انتهای یک شانه تا انتهای شانه دیگر، را از پشت بدن اندازه بگیر. بهتر است کسی کمکت کند. این عدد در کت، کاپشن و پیراهن حالت اندامی لباس را مشخص می‌کند.</div>
+      <div class="gc"><h3><em>۵</em>طول آستین</h3>دستت را کمی خم کن و از سر شانه تا مچ دست را از روی آرنج اندازه بگیر. اگر این عدد بین دو سایز بود، سایز بزرگ‌تر برای کت و پیراهن مناسب‌تر است.</div>
+      <div class="gc"><h3><em>۶</em>قد</h3>بدون کفش و کنار دیوار بایست، سرت صاف باشد و پاشنه‌ها به دیوار چسبیده باشد. قد کمک می‌کند طول لباس و پاچه شلوار درست انتخاب شود.</div>
+    </div>
+  </div>
+
+  <div class="g">
+    <h2>جدول سایزبندی (سانتی‌متر)</h2>
+    <div class="tw"><table id="tb"></table></div>
+  </div>
+
+  <div class="g">
+    <h2>این ابزار چطور کار می‌کند؟</h2>
+    <p class="t">هر اندازه‌ای که وارد می‌کنی جداگانه با جدول سایز مقایسه می‌شود و سایز همان قسمت مشخص می‌شود. بعد سایز نهایی با میانگین وزنی ساخته می‌شود: دور سینه بیشترین اثر را دارد، بعد کمر، عرض شانه، باسن، آستین و قد. حالت دلخواه لباس (جذب، استاندارد یا گشاد) هم سایز نهایی را کمی تنظیم می‌کند. هرچه اندازه‌های بیشتری وارد کنی نتیجه دقیق‌تر است، ولی فقط با دور سینه هم جواب می‌گیری.</p>
+  </div>
+
+  <div class="g">
+    <h2>سوالات متداول</h2>
+    <details><summary>اگر بین دو سایز بودم چه کنم؟</summary><p>برای لباس راحت و روزمره سایز بزرگ‌تر را بگیر و برای لباس اندامی و رسمی سایز کوچک‌تر را، به شرطی که دور سینه و شانه اذیتت نکند.</p></details>
+    <details><summary>چرا سایز قسمت‌ها با هم فرق دارد؟</summary><p>بدن‌ها همیشه متناسب با جدول نیستند. برای بالاتنه (تی‌شرت، پیراهن، کت) به سایز دور سینه و شانه توجه کن و برای پایین‌تنه (شلوار) به کمر و باسن.</p></details>
+    <details><summary>اندازه‌ها را روی بدن بگیرم یا روی لباس؟</summary><p>روی بدن، با لباس نازک یا بدون لباس. اندازه لباس‌های خودت را وارد نکن چون اندازه بدن و اندازه لباس یکی نیست.</p></details>
+    <details><summary>جدول با همه برندها یکی است؟</summary><p>این جدول بر پایه استانداردهای رایج است. برندها گاهی کمی تفاوت دارند، پس اگر برند جدول اختصاصی دارد آن را هم ببین.</p></details>
+  </div>
+  <footer>MINIMAL</footer>
+</div>
+<div id="bar"><div><span>سایز شما</span><br><b id="bs">؟</b></div><span id="be"></span></div>
+<script>
+var R=function(n,e,a,b,c,d,f,g){return{n:n,eu:e,chest:a,waist:b,hips:c,shoulder:d,sleeve:f,height:g}};
+var T={m:[R('XS',44,[82,89],[68,75],[86,93],[41,42.5],[59,60.5],[160,167]),R('S',46,[90,97],[76,83],[94,101],[43,44.5],[61,62.5],[168,173]),R('M',48,[98,105],[84,91],[102,109],[45,46.5],[63,64.5],[174,179]),R('L',50,[106,113],[92,99],[110,117],[47,48.5],[65,66.5],[180,185]),R('XL',52,[114,121],[100,107],[118,125],[49,50.5],[67,68.5],[186,190]),R('XXL',54,[122,131],[108,117],[126,135],[51,53],[69,70.5],[191,196]),R('3XL',56,[132,141],[118,127],[136,145],[54,55.5],[71,72.5],[197,202])],
+f:[R('XS',34,[78,83],[60,65],[85,90],[35,36.5],[57,58.5],[155,162]),R('S',36,[84,89],[66,71],[91,96],[37,38.5],[59,60],[163,168]),R('M',38,[90,95],[72,77],[97,102],[39,40.5],[60.5,61.5],[169,173]),R('L',40,[96,103],[78,85],[103,110],[41,42.5],[62,63],[174,178]),R('XL',42,[104,111],[86,93],[111,118],[43,44.5],[63.5,64.5],[179,183]),R('XXL',44,[112,121],[94,103],[119,128],[45,46.5],[65,66],[184,188])]};
+var K=[['chest','دور سینه','از پهن‌ترین قسمت سینه',70,150,98,3],['waist','دور کمر','باریک‌ترین قسمت تنه',55,140,84,2],['shoulder','عرض شانه','از سر یک شانه تا شانه دیگر',34,60,45,1.5],['hips','دور باسن','پهن‌ترین قسمت باسن',80,150,102,1],['sleeve','طول آستین','از سر شانه تا مچ',52,76,63,.5],['height','قد','بدون کفش',145,210,175,.5]];
+var $=function(i){return document.getElementById(i)};
+var fa=function(x){return Number(x).toLocaleString('fa-IR')};
+var rg=function(a){return fa(a[0])+' - '+fa(a[1])};
+var g='m',fit=0,V={},A={},last='';
+$('ms').innerHTML=K.map(function(k){return '<div class="m" id="m_'+k[0]+'"><div class="mh"><b>'+k[1]+'<small>'+k[2]+'</small></b><div class="st"><button data-k="'+k[0]+'" data-d="1">+</button><input type="number" inputmode="decimal" id="n_'+k[0]+'" value="'+k[5]+'"><button data-k="'+k[0]+'" data-d="-1">−</button><span>cm</span></div></div><input type="range" id="r_'+k[0]+'" min="'+k[3]+'" max="'+k[4]+'" step="0.5" value="'+k[5]+'"></div>'}).join('');
+K.forEach(function(k){V[k[0]]=k[5];
+  $('r_'+k[0]).oninput=function(){set(k[0],this.value)};
+  $('n_'+k[0]).onchange=function(){set(k[0],this.value)};
+});
+document.querySelectorAll('.st button').forEach(function(b){b.onclick=function(){var k=b.dataset.k;set(k,(parseFloat(V[k])||0)+.5*b.dataset.d)}});
+function set(k,v,silent){v=parseFloat(v);if(!(v>0))return;V[k]=v;A[k]=1;$('r_'+k).value=v;$('n_'+k).value=v;$('m_'+k).classList.add('act');if(!silent)calc()}
+function seg(id,fn){$(id).onclick=function(e){var b=e.target.closest('button');if(!b)return;this.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');fn(b.dataset.v)}}
+seg('sg',function(v){g=v;calc()});seg('sf',function(v){fit=parseFloat(v);calc()});
+function idx(k,v){var t=T[g];for(var i=0;i<t.length;i++)if(v<=t[i][k][1])return i;return t.length}
+function table(on){var t=T[g];$('tb').innerHTML='<tr><th>سایز</th><th>اروپا</th><th>دور سینه</th><th>دور کمر</th><th>دور باسن</th><th>عرض شانه</th><th>آستین</th><th>قد</th></tr>'+t.map(function(s,i){return '<tr'+(i===on?' class="on"':'')+'><td>'+s.n+'</td><td>'+fa(s.eu)+'</td><td>'+rg(s.chest)+'</td><td>'+rg(s.waist)+'</td><td>'+rg(s.hips)+'</td><td>'+rg(s.shoulder)+'</td><td>'+rg(s.sleeve)+'</td><td>'+rg(s.height)+'</td></tr>'}).join('')}
+function calc(){
+  var t=T[g],sum=0,w=0,parts=[],over=0,lo=99,hi=-1,under=0;
+  if(!A.chest){$('sz').textContent='؟';$('bs').textContent='؟';$('eu').textContent='یکی از اسلایدرها را حرکت بده';$('ch').innerHTML='';$('nt').textContent='';$('be').textContent='';table(-1);return}
+  K.forEach(function(k){if(!A[k[0]])return;var v=V[k[0]],i=idx(k[0],v);if(i>=t.length){over=1;i=t.length-1}if(v<t[0][k[0]][0])under=1;parts.push([k[1],t[i].n]);sum+=i*k[6];w+=k[6];if(i<lo)lo=i;if(i>hi)hi=i});
+  var f=Math.min(t.length-1,Math.max(0,Math.round(sum/w+fit)));
+  var s=t[f].n;
+  if(s!==last){$('sz').classList.remove('pop');void $('sz').offsetWidth;$('sz').classList.add('pop');last=s}
+  $('sz').textContent=s;$('bs').textContent=s;
+  $('eu').textContent='سایز اروپایی '+fa(t[f].eu);$('be').textContent='اروپا '+fa(t[f].eu);
+  $('ch').innerHTML=parts.map(function(p){return '<div class="chip">'+p[0]+'<b>'+p[1]+'</b></div>'}).join('');
+  var n='';
+  if(over)n+='بعضی اندازه‌هایت از بزرگ‌ترین سایز جدول بیشتر است. ';
+  if(under)n+='بعضی اندازه‌هایت از کوچک‌ترین سایز جدول کمتر است. ';
+  if(hi-lo>=2)n+='اندازه‌های بدنت یکدست نیست. بالاتنه را با دور سینه و شلوار را با کمر و باسن انتخاب کن.';
+  $('nt').textContent=n;table(f);
+}
+$('ex').onclick=function(){var ex=g==='m'?{chest:100,waist:86,shoulder:46,hips:104,sleeve:64,height:176}:{chest:92,waist:74,shoulder:39.5,hips:100,sleeve:60.5,height:170};for(var k in ex)set(k,ex[k],1);calc()};
+$('rs').onclick=function(){A={};K.forEach(function(k){V[k[0]]=k[5];$('r_'+k[0]).value=k[5];$('n_'+k[0]).value=k[5];$('m_'+k[0]).classList.remove('act')});last='';calc()};
+$('cp').onclick=function(){var s=$('sz').textContent;if(s==='؟')return;try{navigator.clipboard.writeText('MINIMAL - سایز پیشنهادی من: '+s+' ('+$('eu').textContent+')');$('cp').textContent='کپی شد ✓';setTimeout(function(){$('cp').textContent='کپی نتیجه'},1500)}catch(e){}};
+document.addEventListener('pointermove',function(e){var c=e.target.closest&&e.target.closest('.g');if(!c)return;var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')});
+calc();
+</script>
+</body>
+</html>
